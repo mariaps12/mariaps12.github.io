@@ -368,15 +368,18 @@ header
 */
 .header-area {
   position: fixed;
-  top: 30px;
+  top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
   height: 100px;
+  width: 100%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  margin: 0;
+  padding: 0;
 }
 
 .header-image {
@@ -386,15 +389,17 @@ header
 }
 
 .header-area .main-nav {
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: space-between; /* Mantiene el logo a la izquierda y el menú a la derecha */
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-  border-radius: 40px;
   min-height: 80px;
-  background: #fff;
+  background: #7fcb27;
 }
 
 .header-area .main-nav .logo {
   float: left;
-  margin-top: 37px;
+  margin-top: 20px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -403,6 +408,10 @@ header
 }
 
 .header-area .main-nav .logo img {
+  width: 60px; /* Tamaño ajustado del logo */
+  height: 60px; /* Ajusta la altura si es necesario */
+  border-radius: 50%; /* Hace que el logo sea circular */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor redondeado */
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -637,6 +646,17 @@ header
 welcome
 --------------------------------------------- 
 */
+
+.header {
+  position: fixed; /* O puedes usar absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  background-color: #fff; /* O el color que prefieras */
+  height: 60px;
+}
+
 .welcome-area {
   overflow: hidden;
   position: relative;
@@ -646,7 +666,7 @@ welcome
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 
-  height: 100vh;
+  height: calc(100vh - 60px); 
   width: 100vw;
 }
 
@@ -1014,6 +1034,19 @@ parallax & home seperator
   }
 }
 
+.niveles-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+.niveles-image {
+  max-width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: auto;
+}
+
+
 
 /* 
 ---------------------------------------------
@@ -1183,7 +1216,7 @@ pricing
 
 .pricing-item .pricing-body {
   margin-bottom: 40px;
-  padding: 20px; 
+  padding: 20px 0px 20px 0px;
 }
 
 .pricing-item .pricing-body .price-wrapper {

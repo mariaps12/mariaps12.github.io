@@ -574,7 +574,7 @@ header
     padding: 0px !important;
     border: none !important;
     background: #fff !important;
-    color: #3B566E !important;
+    color: #7fcb27 !important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -646,6 +646,13 @@ welcome
       color: #fff;
       margin-bottom: 20px;
   }
+  .welcome-area {
+    margin-bottom: 50px; /* Reduce el margen inferior en pantallas pequeñas */
+  }
+  .bienvenida img {
+    margin-top: 10px; /* Ajusta el margen superior de la imagen de bienvenida */
+  }
+
 }
 
 @media (max-width: 820px) {
@@ -660,6 +667,12 @@ welcome
   }
   .welcome-area .header-text p {
       margin-bottom: 20px;
+  }
+  .welcome-area {
+    margin-bottom: 30px; /* Reduce aún más el margen inferior en pantallas más pequeñas */
+  }
+  .bienvenida img {
+    margin-top: 5px; /* Ajusta el margen superior de la imagen de bienvenida */
   }
 }
 
@@ -690,6 +703,12 @@ welcome
       font-size: 14px;
       line-height: 22px;
       margin-bottom: 40px;
+  }
+  .welcome-area {
+    margin-bottom: 20px; /* Ajusta el margen inferior en pantallas aún más pequeñas */
+  }
+  .bienvenida img {
+    margin-top: 0; /* Elimina el margen superior de la imagen de bienvenida en pantallas muy pequeñas */
   }
 }
 

@@ -888,103 +888,6 @@ parallax & home seperator
   box-sizing: border-box;
 }
 
-.counter {
-  overflow: hidden;
-  position: relative;
-}
-
-.counter:before {
-  content: '';
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  opacity: .90;
-  background-image: url(../images/fun-facts-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  z-index: 2;
-  top: -20%;
-  left: -20%;
-}
-
-.counter .content {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-}
-
-.counter .content .count-item {
-  height: 340px;
-  position: relative;
-  float: left;
-  width: 100%;
-}
-
-.counter .content .count-item.decoration-bottom {
-  position: relative;
-}
-
-.counter .content .count-item.decoration-bottom:after {
-  content: '';
-  position: absolute;
-  width: 70%;
-  height: 32px;
-  top: 160px;
-  left: 70%;
-  background: url(../images/circle-dec.png) center center no-repeat;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.counter .content .count-item.decoration-top {
-  position: relative;
-}
-
-.counter .content .count-item.decoration-top:after {
-  content: '';
-  position: absolute;
-  width: 70%;
-  height: 32px;
-  top: 140px;
-  left: 70%;
-  background: url(../images/circle-dec.png) center center no-repeat;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.counter .content .count-item:hover strong {
-  margin-top: 110px;
-}
-
-.counter .content .count-item strong {
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  font-size: 36px;
-  letter-spacing: 0.25px;
-  margin-bottom: 10px;
-  color: #fbf8f1;
-  margin-top: 120px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.counter .content .count-item span {
-  display: block;
-  text-align: center;
-  color: #fbf8f1;
-  font-weight: 500;
-  font-size: 17px;
-  letter-spacing: 0.25px;
-}
-
 @media (max-width: 991px) {
   .parallax {
     padding-top: 60px;
@@ -996,32 +899,7 @@ parallax & home seperator
     top: 0% !important;
     transform: perspective(1px) translateY(0%) !important;
   }
-  .counter {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .counter .content {
-    position: relative !important;
-    top: 0% !important;
-    transform: perspective(1px) translateY(0%) !important;
-  }
-  .counter .content .count-item {
-    height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .counter .content .count-item:hover strong {
-    margin-top: 0px;
-  }
-  .counter .content .count-item:before {
-    display: none;
-  }
-  .counter .content .count-item:after {
-    display: none;
-  }
-  .counter .content .count-item strong {
-    margin-top: 0px;
-  }
+  
   .mini .mini-content .mini-box {
     margin: 10px;
     width: calc(100% - 20px);
@@ -1045,8 +923,6 @@ parallax & home seperator
   max-width: 100%;
   height: auto;
 }
-
-
 
 /* 
 ---------------------------------------------
@@ -1091,6 +967,7 @@ team
 
 .team-content {
   margin-top: 100px; /* Espacio superior para la imagen */
+  height: 380px;
 }
 
 /* Tamaño letra Miriam Paula Sara */
@@ -1120,7 +997,40 @@ team
   color: red;
 }
 
+/* Pantallas grandes (portátiles y desktops) */
+@media (min-width: 1024px) {
+  .team-content {
+    height: 380px;
+  }
+}
 
+/* Pantallas medianas (tabletas en modo horizontal) */
+@media (min-width: 768px) {
+  .team-content {
+    height: 450px;
+  }
+}
+
+/* Pantallas pequeñas (tabletas en modo vertical y teléfonos grandes) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .team-content {
+    height: 300px;
+  }
+}
+
+/* Pantallas muy pequeñas (teléfonos móviles) */
+@media (max-width: 479px) {
+  .team-content {
+    height: 150px;
+  }
+}
+
+/* Pantallas extra pequeñas (teléfonos móviles muy pequeños) */
+@media (max-width: 320px) {
+  .team-content {
+    height: 200px;
+  }
+}
 
 
 /* 
@@ -1137,9 +1047,12 @@ pricing
   border-radius: 20px;
   margin-bottom: 30px;
   margin-top: 20px;
-  padding: 30px 0px 40px 0px;
   min-height: 350px;
   border: 1px solid #ccc;
+  height: 600px; /* Altura fija */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el contenido */
 }
 
 /* Barra arriba de las cajas de los lados */
@@ -1149,9 +1062,8 @@ pricing
   top: 10px;
   left: 10px;
   right: 10px;
-  height: 30px;
-  /* background: #f0f0f0; */
-  background: red;
+  height: 40px;
+  background: #fff500;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid #ccc;
 }
@@ -1173,8 +1085,8 @@ pricing
 
 .hand-drawn-button.yellow {
   left: 40px;
-  border-color: yellow;
-  background: yellow;
+  border-color: orange;
+  background: orange;
 }
 
 .hand-drawn-button.green {
@@ -1190,8 +1102,8 @@ pricing
   top: 10px;
   left: 10px;
   right: 10px;
-  height: 30px;
-  background: #f0f0f0;
+  height: 40px;
+  background: #fff500;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid #ccc;
 }
@@ -1232,6 +1144,7 @@ pricing
 
 .image-container {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -1258,20 +1171,11 @@ pricing
   padding: 10px;
 }
 
-.pricing-item .pricing-body {
-  margin-bottom: 40px;
-  padding: 20px 0px 20px 0px;
-}
-
 /* Tamaño de la letra de la descripción de metodología */
 .pricing-item .pricing-body .list li.active {
   color: #555;
   text-decoration: none;
-  padding: 10px;
   font-size: 16px;
-  line-height: 1.5;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .image-container {
@@ -1294,16 +1198,54 @@ pricing
   position: relative;
 }
 
-.pricing-item::before {
-  content: '';
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background: #fff500;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   position: absolute;
   top: 10px;
   left: 10px;
   right: 10px;
-  height: 30px;
-  background: #f0f0f0; 
-  border-radius: 10px 10px 0 0;
-  border-bottom: 1px solid #ccc;
+}
+
+.search-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.url {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 14px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.address-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #fff500;
+  border-top: 1px solid #ccc;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+.address-bar .nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.address-bar .nav-buttons div {
+  width: 20px;
+  height: 20px;
+  background: gray;
 }
 
 

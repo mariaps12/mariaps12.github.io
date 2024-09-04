@@ -19,7 +19,9 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Matemasie&display=swap');/* 
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Matemasie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Playwrite+CU:wght@100..400&display=swap');
+/*
 ---------------------------------------------
 reset
 --------------------------------------------- 
@@ -805,7 +807,7 @@ parallax & home seperator
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background: #fbf8f1;
+  background: white;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
@@ -1061,7 +1063,7 @@ team
 }
 
 .team-item {
-  background: #fbf8f1; /* Fondo del contenedor */
+  background: white; /* Fondo del contenedor */
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -1091,10 +1093,15 @@ team
   margin-top: 100px; /* Espacio superior para la imagen */
 }
 
+/* Tamaño letra Miriam Paula Sara */
 .user-name {
-  font-size: 24px;
-  color: #333;
+  font-size: 60px;
+  color: #1e1e1e;
   margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "Ephesis", cursive;
+  font-weight: 500px;
+  font-style: normal;
 }
 
 .team-content span {
@@ -1109,6 +1116,10 @@ team
   margin-top: 20px;
 }
 
+.detalles-nombre {
+  color: red;
+}
+
 
 
 
@@ -1117,60 +1128,134 @@ team
 pricing
 --------------------------------------------- 
 */
+
+/* Caja */
 .pricing-item {
-  position: relative; /* Necesario para posicionar los pseudo-elementos */
-  background: #fbf8f1;
+  position: relative;
+  background: white;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-bottom: 30px;
   margin-top: 20px;
   padding: 30px 0px 40px 0px;
-  min-height: 350px; /* Ajusta este valor según la altura de la caja más grande */
+  min-height: 350px;
+  border: 1px solid #ccc;
 }
 
-
-.pricing-item.active .pricing-header {
-  position: relative;
+/* Barra arriba de las cajas de los lados */
+.pricing-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 30px;
+  /* background: #f0f0f0; */
+  background: red;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #ccc;
 }
 
-.pricing-item.active .pricing-header .pricing-title {
-  color: #1e1e1e;
+.hand-drawn-button {
+  position: absolute;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
 }
 
-.pricing-item.active .pricing-body .price-wrapper {
-  background-color: #7fcb27;
+.hand-drawn-button.red {
+  left: 20px;
+  border-color: red;
+  background: red;
 }
 
-.pricing-item.active .pricing-body .price-wrapper .currency {
-  color: #fbf8f1;
+.hand-drawn-button.yellow {
+  left: 40px;
+  border-color: yellow;
+  background: yellow;
 }
 
-.pricing-item.active .pricing-body .price-wrapper .price {
-  color: #fbf8f1;
+.hand-drawn-button.green {
+  left: 60px;
+  border-color: green;
+  background: green;
 }
 
-.pricing-item.active .pricing-body .price-wrapper .period {
-  color: #fbf8f1;
+/* Barra de arriba de la caja del medio */
+.pricing-item.second::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 30px;
+  background: #f0f0f0;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #ccc;
 }
 
-.pricing-item .pricing-header {
+.windows-buttons {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.windows-buttons .button {
+  width: 12px;
+  height: 12px;
+  background: none;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 1;
+  border-radius: 2px;
+  color: black;
+}
+
+.windows-buttons .button.minimize::before {
+  content: '-';
+}
+
+.windows-buttons .button.maximize::before {
+  content: '□';
+}
+
+.windows-buttons .button.close::before {
+  content: 'x';
+}
+
+.image-container {
   text-align: center;
-  display: block;
-  position: relative;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.pricing-item .pricing-header .pricing-title {
-  font-weight: 500;
-  font-size: 17px;
+.rounded-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.list li {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 13px;
+  color: red;
   letter-spacing: 0.25px;
-  color: #1e1e1e;
-  width: 180px;
-  height: 40px;
-  line-height: 40px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
+  padding: 10px;
+}
+
+.list li.active {
+  color: red;
+  text-decoration: none;
+  padding: 10px;
 }
 
 .pricing-item .pricing-body {
@@ -1178,66 +1263,20 @@ pricing
   padding: 20px 0px 20px 0px;
 }
 
-.pricing-item .pricing-body .price-wrapper {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 13px;
-  background: #2f4a0e;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 40px;
-  margin-top: 5px;
-  border-radius: 20px;
-}
-
-.pricing-item .pricing-body .price-wrapper .currency {
-  height: 47px;
-  font-weight: 500;
-  font-size: 32px;
-  color: #fbf8f1;
-  position: relative;
-  top: -1px;
-}
-
-.pricing-item .pricing-body .price-wrapper .price {
-  font-weight: 500;
-  font-size: 28px;
-  color: #fbf8f1;
-}
-
-.pricing-item .pricing-body .price-wrapper .period {
-  font-weight: 400;
-  font-size: 14px;
-  color: #fbf8f1;
-  display: block;
-  letter-spacing: 0.88px;
-}
-
-.pricing-item .pricing-body .list li {
-  text-align: center;
-  margin-bottom: 12px;
-  font-weight: 400;
-  font-size: 13px;
-  color: #7a7a7a;
-  letter-spacing: 0.25px;
-  text-decoration: line-through;
-  padding: 10px;
-}
-
+/* Tamaño de la letra de la descripción de metodología */
 .pricing-item .pricing-body .list li.active {
-  color: #7a7a7a;
+  color: #555;
   text-decoration: none;
   padding: 10px;
-}
-
-.pricing-item .pricing-footer {
-  text-align: center;
-  margin-top: 50px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .image-container {
   text-align: center; /* Centra la imagen dentro de la caja */
-  margin-bottom: 20px; /* Espaciado debajo de la imagen */
+  margin-bottom: 10px; /* Espaciado debajo de la imagen */
 }
 
 .rounded-image {
@@ -1246,6 +1285,29 @@ pricing
   border-radius: 50%; /* Hace la imagen redonda */
   object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
 }
+
+/* Estilos para la caja del navegador móvil */
+/* Estilos para la caja del navegador móvil */
+.pricing-item.mobile-browser {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pricing-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 30px;
+  background: #f0f0f0; 
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
 
 
 /* 

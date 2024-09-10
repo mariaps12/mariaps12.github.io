@@ -1005,32 +1005,33 @@ team
 }
 
 /* Pantallas medianas (tabletas en modo horizontal) */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .team-content {
     height: 450px;
   }
 }
 
-/* Pantallas pequeñas (tabletas en modo vertical y teléfonos grandes) */
+/* Pantallas pequeñas (teléfonos grandes y tabletas en modo vertical) */
 @media (min-width: 480px) and (max-width: 767px) {
   .team-content {
-    height: 300px;
+    height: 350px;
   }
 }
 
 /* Pantallas muy pequeñas (teléfonos móviles) */
 @media (max-width: 479px) {
   .team-content {
-    height: 150px;
+    height: 300px;
   }
 }
 
-/* Pantallas extra pequeñas (teléfonos móviles muy pequeños) */
-@media (max-width: 320px) {
+/* Ajuste específico para pantallas de alta resolución como Samsung Galaxy A52s */
+@media (min-width: 1080px) and (max-width: 2400px) {
   .team-content {
-    height: 200px;
+    height: 320px;
   }
 }
+
 
 
 /* 

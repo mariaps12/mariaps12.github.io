@@ -1023,7 +1023,7 @@ team
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto; /* Aseguramos que no haya desbordamiento */
+    overflow: hidden; /* Aseguramos que no haya desbordamiento */
   }
 }
 
@@ -1034,7 +1034,7 @@ team
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
   }
 }
 
@@ -1045,7 +1045,7 @@ team
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
   }
 }
 
@@ -1056,7 +1056,7 @@ team
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
   }
 }
 
@@ -1067,7 +1067,7 @@ team
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
   }
 }
 

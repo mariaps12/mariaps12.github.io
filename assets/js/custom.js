@@ -7,6 +7,7 @@
 
 
 	// Scroll animation init
+	window.sr = new scrollReveal();
 	
 
 	// Menu Dropdown Toggle
@@ -91,6 +92,25 @@
 			time: 1000
 		});
 	}
+
+
+	// Page loading animation
+	$(window).on('load', function() {
+		if($('.cover').length){
+			$('.cover').parallax({
+				imageSrc: $('.cover').data('image'),
+				zIndex: '1'
+			});
+		}
+
+		$("#preloader").animate({
+			'opacity': '0'
+		}, 600, function(){
+			setTimeout(function(){
+				$("#preloader").css("visibility", "hidden").fadeOut();
+			}, 300);
+		});
+	});
 
 
 	// Window Resize Mobile Menu Fix

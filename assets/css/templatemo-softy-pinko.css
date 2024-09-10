@@ -21,7 +21,17 @@ font & reset css
 */
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Matemasie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Playwrite+CU:wght@100..400&display=swap');
+
+
+.carousel-image {
+  max-height: 783px;
+  object-fit: cover; /* Esto asegura que la imagen se recorte y se ajuste al contenedor sin distorsionar la imagen */
+}
+
 /*
+
+
+
 ---------------------------------------------
 reset
 --------------------------------------------- 

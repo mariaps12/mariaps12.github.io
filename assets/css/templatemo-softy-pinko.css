@@ -24,9 +24,18 @@ font & reset css
 
 
 .carousel-image {
-  max-height: 783px;
-  object-fit: cover; /* Esto asegura que la imagen se recorte y se ajuste al contenedor sin distorsionar la imagen */
+  width: 100%;
+  /* Asegúrate de que la imagen ocupe el 100% del ancho del contenedor */
 }
+
+@media (min-width: 992px) {
+  /* Aplica estilos solo en pantallas grandes (>= 992px de ancho) */
+  .carousel-image {
+      max-height: 783px;
+      object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+  }
+}
+
 
 /*
 
@@ -1010,37 +1019,58 @@ team
 /* Pantallas grandes (portátiles y desktops) */
 @media (min-width: 1024px) {
   .team-content {
-    height: 380px;
+    min-height: 380px; /* Ajustamos a min-height en lugar de height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto; /* Aseguramos que no haya desbordamiento */
   }
 }
 
 /* Pantallas medianas (tabletas en modo horizontal) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .team-content {
-    height: 450px;
+    min-height: 450px; /* Ajustamos a min-height en lugar de height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
   }
 }
 
 /* Pantallas pequeñas (teléfonos grandes y tabletas en modo vertical) */
 @media (min-width: 480px) and (max-width: 767px) {
   .team-content {
-    height: 350px;
+    min-height: 350px; /* Ajustamos a min-height en lugar de height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
   }
 }
 
 /* Pantallas muy pequeñas (teléfonos móviles) */
 @media (max-width: 479px) {
   .team-content {
-    height: 300px;
+    min-height: 300px; /* Ajustamos a min-height en lugar de height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
   }
 }
 
 /* Ajuste específico para pantallas de alta resolución como Samsung Galaxy A52s */
 @media (min-width: 1080px) and (max-width: 2400px) {
   .team-content {
-    height: 320px;
+    min-height: 320px; /* Ajustamos a min-height en lugar de height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
   }
 }
+
 
 
 

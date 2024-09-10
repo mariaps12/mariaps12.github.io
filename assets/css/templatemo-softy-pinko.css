@@ -986,7 +986,9 @@ team
 
 .team-content {
   margin-top: 100px; /* Espacio superior para la imagen */
-  height: 380px;
+  /* height: 380px;*/
+  max-height: 100%;
+  overflow: hidden;
 }
 
 /* Tamaño letra Miriam Paula Sara */

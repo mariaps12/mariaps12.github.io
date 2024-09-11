@@ -999,15 +999,11 @@ carrusel
   padding-top: 40px;
 }
 
-/* Muestra dos imágenes por slide en todas las pantallas */
+/* Muestra tres imágenes por slide en todas las pantallas */
 .carousel-item .col-6 {
-  flex: 0 0 50%; /* Cada imagen ocupa el 50% del ancho del slide */
+  flex: 0 0 33%; /* Cada imagen ocupa el 50% del ancho del slide */
   max-width: 50%;
 }
-
-
-
-
 
 
 

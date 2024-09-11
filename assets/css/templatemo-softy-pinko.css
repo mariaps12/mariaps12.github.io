@@ -641,7 +641,6 @@ welcome
 .welcome-area img, .bienvenida img {
   max-width: 100%;
   height: auto;
-  display: block;
   margin: 0 auto;
 }
 
@@ -651,7 +650,7 @@ welcome
 }
 
 /* Estilo específico para el área de bienvenida */
-.welcome-area {
+.welcome-area .img-mobile {
   padding-top: 80px; /* Ajusta este valor al tamaño del encabezado */
   background-repeat: no-repeat;
   background-position: center center;
@@ -659,90 +658,38 @@ welcome
   overflow: hidden;
 }
 
-@media (max-width: 991px) {
-  .welcome-area .header-text {
-      top: 65% !important;
-      transform: perspective(1px) translateY(-60%) !important;
-      text-align: center;
-  }
-  .welcome-area .header-text h1 {
-      text-align: center;
-      color: #fbf8f1;
-      margin-bottom: 15px;
-  }
-  .welcome-area .header-text h1 span {
-      color: #fbf8f1;
-  }
-  .welcome-area .header-text p {
-      text-align: center;
-      color: #fbf8f1;
-      margin-bottom: 20px;
-  }
-  .welcome-area {
-    margin-bottom: 50px; /* Reduce el margen inferior en pantallas pequeñas */
-  }
-  .bienvenida img {
-    margin-top: 10px; /* Ajusta el margen superior de la imagen de bienvenida */
-  }
-
+/* Imagen por defecto en pantallas grandes */
+.img-mobile {
+  display: none; /* Oculta la imagen móvil por defecto */
+  padding-top: 80px; /* Ajusta este valor al tamaño del encabezado */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+  overflow: hidden;
 }
 
-@media (max-width: 820px) {
-  .welcome-area .header-text {
-      top: 65% !important;
-      transform: perspective(1px) translateY(-60%) !important;
+.img-desktop {
+  padding-top: 80px; /* Ajusta este valor al tamaño del encabezado */
+
+  max-width: 100%;
+  height: auto;
+  display: block; /* Muestra la imagen de escritorio por defecto */
+  margin: 0 auto;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+  .img-desktop {
+    display: none; /* Oculta la imagen de escritorio en pantallas pequeñas */
   }
-  .welcome-area .header-text h1 {
-      font-size: 22px;
-      line-height: 30px;
-      margin-bottom: 15px;
-  }
-  .welcome-area .header-text p {
-      margin-bottom: 20px;
-  }
-  .welcome-area {
-    margin-bottom: 30px; /* Reduce aún más el margen inferior en pantallas más pequeñas */
-  }
-  .bienvenida img {
-    margin-top: 5px; /* Ajusta el margen superior de la imagen de bienvenida */
+
+  .img-mobile {
+    display: block; /* Muestra la imagen móvil en pantallas pequeñas */
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 765px) {
-  .welcome-area {
-      margin-bottom: 100px;
-  }
-  .welcome-area .header-text {
-      top: 50% !important;
-      transform: perspective(1px) translateY(-50%) !important;
-      text-align: center;
-  }
-  .welcome-area .header-text .buttons {
-      display: none;
-  }
-  .welcome-area .header-text h1 {
-      font-weight: 600;
-      font-size: 24px !important;
-      line-height: 30px !important;
-      margin-bottom: 30px !important;
-  }
-  .welcome-area .header-text h1 span {
-      color: #fbf8f1;
-  }
-  .welcome-area .header-text p {
-      text-align: center;
-      color: #fbf8f1;
-      font-size: 14px;
-      line-height: 22px;
-      margin-bottom: 40px;
-  }
-  .welcome-area {
-    margin-bottom: 20px; /* Ajusta el margen inferior en pantallas aún más pequeñas */
-  }
-  .bienvenida img {
-    margin-top: 0; /* Elimina el margen superior de la imagen de bienvenida en pantallas muy pequeñas */
-  }
-}
 
 
 /* 

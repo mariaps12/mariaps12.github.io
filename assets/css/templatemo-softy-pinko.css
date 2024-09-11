@@ -19,6 +19,7 @@ font & reset css
 */
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Matemasie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 
 .carousel-image {
@@ -170,7 +171,7 @@ body {
 /* Título de cada sección */
 .center-heading .section-title {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 55px;
   color: #1e1e1e;  /* Puedes cambiar este color si es necesario */
   letter-spacing: 1.75px;
   line-height: 38px;
@@ -179,6 +180,9 @@ body {
   display: inline-block;
   padding: 10px 20px;
   z-index: 1;
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .center-heading .section-title::before {

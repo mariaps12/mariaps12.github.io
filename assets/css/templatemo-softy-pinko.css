@@ -628,36 +628,6 @@ welcome
 --------------------------------------------- 
 */
 
-.header {
-  position: fixed; /* O puedes usar absolute */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-  background-color: #fbf8f1; /* O el color que prefieras */
-  height: 60px;
-}
-
-.welcome-area img, .bienvenida img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Asegura que las imágenes se ajusten a su contenedor */
-.welcome-area, .bienvenida {
-  text-align: center; /* Centra las imágenes en sus contenedores */
-}
-
-/* Estilo específico para el área de bienvenida */
-.welcome-area .img-mobile {
-  padding-top: 80px; /* Ajusta este valor al tamaño del encabezado */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; 
-  overflow: hidden;
-}
-
 /* Imagen por defecto en pantallas grandes */
 .img-mobile {
   display: none; /* Oculta la imagen móvil por defecto */
@@ -670,7 +640,6 @@ welcome
 
 .img-desktop {
   padding-top: 80px; /* Ajusta este valor al tamaño del encabezado */
-
   max-width: 100%;
   height: auto;
   display: block; /* Muestra la imagen de escritorio por defecto */

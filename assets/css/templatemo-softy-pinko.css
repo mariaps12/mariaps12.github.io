@@ -6,10 +6,8 @@ Table of contents
 03. global styles
 04. header
 05. welcome
-
 07. team
 08. pricing
-
 10. contact
 11. footer
 
@@ -997,24 +995,16 @@ carrusel
   padding-top: 40px;
 }
 
-/* Para pantallas grandes (3 imágenes por fila) */
-.carousel-item .col-md-4 {
+/* Carrusel base para pantallas grandes (mostrando 3 imágenes) */
+.carousel-item .col-lg-4 {
   flex: 0 0 33.3333%; /* Ocupa un tercio del ancho */
   max-width: 33.3333%;
   padding: 0 5px; /* Espaciado entre imágenes */
 }
 
-/* Pantallas extra grandes (desktops anchos) */
-@media (min-width: 1440px) {
-  .carousel-item .col-md-4 {
-    flex: 0 0 25%; /* Muestra 4 imágenes en pantallas muy grandes */
-    max-width: 25%;
-  }
-}
-
 /* Pantallas grandes (portátiles y desktops) */
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .carousel-item .col-md-4 {
+@media (min-width: 1024px) {
+  .carousel-item .col-lg-4 {
     flex: 0 0 33.3333%; /* Muestra 3 imágenes */
     max-width: 33.3333%;
   }
@@ -1022,35 +1012,14 @@ carrusel
 
 /* Pantallas medianas (tabletas en modo horizontal) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .carousel-item .col-md-4 {
+  .carousel-item .col-md-6 {
     flex: 0 0 50%; /* Muestra 2 imágenes */
     max-width: 50%;
   }
 }
 
-/* Pantallas pequeñas (teléfonos grandes y tabletas en modo vertical) */
-@media (min-width: 480px) and (max-width: 767px) {
-  .carousel-item .col-md-4 {
-    flex: 0 0 100%; /* Muestra 1 imagen */
-    max-width: 100%;
-  }
-}
 
-/* Pantallas muy pequeñas (teléfonos móviles) */
-@media (max-width: 479px) {
-  .carousel-item .col-md-4 {
-    flex: 0 0 100%; /* Muestra 1 imagen ocupando todo el ancho */
-    max-width: 100%;
-  }
-}
 
-/* Ajuste específico para pantallas de alta resolución como el Samsung Galaxy A52s */
-@media (min-width: 1080px) and (max-width: 2400px) {
-  .carousel-item .col-md-4 {
-    flex: 0 0 33.3333%; /* Similar a pantallas grandes, 3 imágenes */
-    max-width: 33.3333%;
-  }
-}
 
 
 

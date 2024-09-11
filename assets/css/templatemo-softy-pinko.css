@@ -1300,6 +1300,18 @@ contact
   text-align: center;
 }
 
+/* Estilo para los enlaces dentro del bloque de contacto */
+.contact-info a {
+  color: inherit; /* Hereda el color del texto del contenedor */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Opcional: agrega subrayado solo al pasar el ratón sobre el enlace */
+  color: #000; /* Opcional: cambia el color al pasar el ratón sobre el enlace */
+}
+
+
 
 /* 
 ---------------------------------------------

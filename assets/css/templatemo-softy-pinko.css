@@ -995,28 +995,12 @@ carrusel
   padding-top: 40px;
 }
 
-/* Carrusel base para pantallas grandes (mostrando 3 imágenes) */
-.carousel-item .col-lg-4 {
-  flex: 0 0 33.3333%; /* Ocupa un tercio del ancho */
-  max-width: 33.3333%;
-  padding: 0 5px; /* Espaciado entre imágenes */
+/* Muestra dos imágenes por slide en todas las pantallas */
+.carousel-item .col-6 {
+  flex: 0 0 50%; /* Cada imagen ocupa el 50% del ancho del slide */
+  max-width: 50%;
 }
 
-/* Pantallas grandes (portátiles y desktops) */
-@media (min-width: 1024px) {
-  .carousel-item .col-lg-4 {
-    flex: 0 0 33.3333%; /* Muestra 3 imágenes */
-    max-width: 33.3333%;
-  }
-}
-
-/* Pantallas medianas (tabletas en modo horizontal) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .carousel-item .col-md-6 {
-    flex: 0 0 50%; /* Muestra 2 imágenes */
-    max-width: 50%;
-  }
-}
 
 
 

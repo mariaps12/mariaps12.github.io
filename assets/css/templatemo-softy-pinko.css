@@ -754,7 +754,7 @@ parallax & home seperator
   min-height: 215px;
   overflow: hidden;
   position: relative;
-  padding-top: 90px;
+  padding-top: 50px;
   padding-bottom: 90px;
 }
 
@@ -763,11 +763,7 @@ parallax & home seperator
   position: absolute;
   width: 140%;
   height: 140%;
-  opacity: .95;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(../images/work-process-bg.png);
+  background: #fbf8f1;
   z-index: 2;
   top: -20%;
   left: -20%;
@@ -1066,6 +1062,79 @@ team
   }
 }
 
+/* 
+---------------------------------------------
+carrusel
+--------------------------------------------- 
+*/
+
+#carrusel-fotos {
+  padding-bottom: 100px;
+  position: relative;
+  background-image: url('../images/fondoequipo2.png'); /* Ruta a tu imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+#carrusel-fotos .center-heading {
+  padding-top: 40px;
+}
+
+/* Para pantallas grandes (3 imágenes por fila) */
+.carousel-item .col-md-4 {
+  flex: 0 0 33.3333%; /* Ocupa un tercio del ancho */
+  max-width: 33.3333%;
+  padding: 0 5px; /* Espaciado entre imágenes */
+}
+
+/* Pantallas extra grandes (desktops anchos) */
+@media (min-width: 1440px) {
+  .carousel-item .col-md-4 {
+    flex: 0 0 25%; /* Muestra 4 imágenes en pantallas muy grandes */
+    max-width: 25%;
+  }
+}
+
+/* Pantallas grandes (portátiles y desktops) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .carousel-item .col-md-4 {
+    flex: 0 0 33.3333%; /* Muestra 3 imágenes */
+    max-width: 33.3333%;
+  }
+}
+
+/* Pantallas medianas (tabletas en modo horizontal) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-item .col-md-4 {
+    flex: 0 0 50%; /* Muestra 2 imágenes */
+    max-width: 50%;
+  }
+}
+
+/* Pantallas pequeñas (teléfonos grandes y tabletas en modo vertical) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .carousel-item .col-md-4 {
+    flex: 0 0 100%; /* Muestra 1 imagen */
+    max-width: 100%;
+  }
+}
+
+/* Pantallas muy pequeñas (teléfonos móviles) */
+@media (max-width: 479px) {
+  .carousel-item .col-md-4 {
+    flex: 0 0 100%; /* Muestra 1 imagen ocupando todo el ancho */
+    max-width: 100%;
+  }
+}
+
+/* Ajuste específico para pantallas de alta resolución como el Samsung Galaxy A52s */
+@media (min-width: 1080px) and (max-width: 2400px) {
+  .carousel-item .col-md-4 {
+    flex: 0 0 33.3333%; /* Similar a pantallas grandes, 3 imágenes */
+    max-width: 33.3333%;
+  }
+}
 
 
 
@@ -1074,6 +1143,10 @@ team
 pricing
 --------------------------------------------- 
 */
+
+#pricing-plans {
+  background: #fbf8f1;
+}
 
 /* Caja */
 .pricing-item {
@@ -1295,7 +1368,13 @@ contact
 */
 
 #contact-us {
-  padding: 160px 0px;
+  padding-top: 40px;
+  position: relative;
+  background: #fbf8f1;
+  background-image: url('../images/fondoequipo2.png'); /* Ruta a tu imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 #contact-us h5 {

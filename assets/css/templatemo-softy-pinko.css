@@ -943,7 +943,7 @@ team
 /* Pantallas medianas (tabletas en modo horizontal) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .team-content {
-    min-height: 450px; /* Ajustamos a min-height en lugar de height */
+    min-height: 470px; /* Ajustamos a min-height en lugar de height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1005,6 +1005,21 @@ carrusel
   max-width: 50%;
 }
 
+/* Para portátiles y dispositivos más grandes */
+@media (min-width: 992px) { 
+  .carousel-item .col-6 {
+    flex: 0 0 33.333%; /* Cada imagen ocupa aproximadamente un tercio del ancho del slide */
+    max-width: 33.333%;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 767px) { 
+  .carousel-item .col-6 {
+    flex: 0 0 100%; /* Cada imagen ocupa el ancho completo del slide */
+    max-width: 100%;
+  }
+}
 
 /* 
 ---------------------------------------------

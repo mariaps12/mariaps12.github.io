@@ -594,34 +594,7 @@ equipo
 carrusel
 --------------------------------------------- 
 */
-#carrusel-fotos {
-  padding-bottom: 100px;
-  position: relative;
-  background: #fbf8f1;
-}
 
-#carrusel-fotos .center-heading {
-  padding-top: 40px;
-}
-
-.carousel-item .col-6 {
-  flex: 0 0 33%; 
-  max-width: 50%;
-}
-
-@media (min-width: 992px) { 
-  .carousel-item .col-6 {
-    flex: 0 0 33.333%; 
-    max-width: 33.333%;
-  }
-}
-
-@media (max-width: 767px) { 
-  .carousel-item .col-6 {
-    flex: 0 0 100%; 
-    max-width: 100%;
-  }
-}
 
 
 

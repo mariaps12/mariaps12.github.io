@@ -361,7 +361,8 @@
                                </div>
                             </div>
                          </form>
-                         
+                         <div id="form-message" style="display:none; color:#2f4a0e; margin-top: 20px;"></div>
+
                     </div>
                 </div>
             </div>
@@ -447,9 +448,14 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.querySelector('form'); // Seleccionamos el formulario
+            const messageDiv = document.getElementById('form-message'); // Seleccionamos el contenedor del mensaje
+            
             form.addEventListener('submit', function (event) {
                 // Capturamos el envío del formulario
                 event.preventDefault(); // Prevenimos el comportamiento predeterminado
+                
+                // Ocultamos el mensaje al enviar
+                messageDiv.style.display = 'none'; 
 
                 // Enviar el formulario usando Formspree
                 fetch(form.action, {
@@ -462,16 +468,26 @@
                     if (response.ok) {
                         // Limpiar el formulario si el envío es exitoso
                         form.reset();
-                        alert('Mensaje enviado con éxito.');
+                        // Mostramos el mensaje de éxito
+                        messageDiv.style.display = 'block';
+                        messageDiv.style.color = 'green';
+                        messageDiv.innerHTML = 'Mensaje enviado con éxito.';
                     } else {
-                        alert('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.');
+                        // Mostramos el mensaje de error
+                        messageDiv.style.display = 'block';
+                        messageDiv.style.color = 'red';
+                        messageDiv.innerHTML = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.';
                     }
                 }).catch(error => {
-                    alert('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.');
+                    // Mostramos el mensaje de error
+                    messageDiv.style.display = 'block';
+                    messageDiv.style.color = 'red';
+                    messageDiv.innerHTML = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.';
                 });
             });
         });
     </script>
+
 
   </body>
 </html>
